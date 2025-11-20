@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Planner Online</h1>
+
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Nama Tugas">
+            <input type="date" id="taskDeadline">
+            <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button onclick="addTask()">Tambah Tugas</button>
+        </div>
+
+        <div class="task-controls">
+            <button onclick="sortByDeadline()">Sort by Deadline</button>
+            <button onclick="sortByPriority()">Sort by Priority</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="ai-box">
+            <h3>Dapatkan Saran AI</h3>
+            <textarea id="aiInput" placeholder="Masukkan daftar tugas..."></textarea>
+            <button onclick="getAiSuggestion()">Minta Saran</button>
+            <p id="aiResult"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
